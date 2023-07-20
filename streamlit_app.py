@@ -16,4 +16,9 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 # CALLING THE DATAFRAME WITH STREAMLIT
 st.dataframe(my_fruit_list)
 
+# ADDING INTERACTION WITH THE MENU
+# LET'S PUT A PICK LIST HERE SO THE CAN PICK THE FRUIT THEY WANT TO INCLUDE
+st.multiselect("Pick some fruits:" list(my_fruit_list.index))
 
+# DISPLAY THE TABLE ON THE PAGE
+st.dataframe(my_fruit_list)
