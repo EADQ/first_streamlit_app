@@ -16,7 +16,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # ADDING INTERACTION WITH THE MENU
 # LET'S PUT A PICK LIST HERE SO THE CAN PICK THE FRUIT THEY WANT TO INCLUDE
-st.multiselect("Pick some fruits:", list(my_fruit_list.index))
+# st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # LET'S PUT A PICK LIST HER SO THEY CAN PICK THE FRUIT THEY WANT TO INCLUDE
 st.multiselect("Pick some fruits:", list(my_fruit_list.index)),['Avocado','Strawberries']
