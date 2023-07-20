@@ -16,6 +16,7 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 # ADDING INTERACTION WITH THE MENU
 # LET'S PUT A PICK LIST HERE SO THE CAN PICK THE FRUIT THEY WANT TO INCLUDE
 st.multiselect("Pick some fruits:", list(my_fruit_list.index))
+my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # DISPLAY THE TABLE ON THE PAGE
 st.dataframe(my_fruit_list)
