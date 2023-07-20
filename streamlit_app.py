@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # MAKING BASE MENU
-st.title('My Mom's New Healthy Diner')
+st.title("My Mom's New Healthy Diner")
 st.header('Breakfast Menu')
 st.text('🥣 Omega 3 & Blueberry Oatmeal')
 st.text('🥗 Kale, Spinach & Rocket Smoothie')
