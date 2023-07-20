@@ -19,7 +19,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # st.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # LET'S PUT A PICK LIST HER SO THEY CAN PICK THE FRUIT THEY WANT TO INCLUDE
-st.multiselect("Pick some fruits:", list(my_fruit_list.index)),['Avocado','Strawberries']
+st.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
 
 
 # DISPLAY THE TABLE ON THE PAGE
