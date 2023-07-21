@@ -32,3 +32,8 @@ st.header("Fruityvice Fruit Advice!")
 # CALLING RHE FRUITYVICE API'
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruityvice_response.json())
+
+# WRITE YOUR OWN COMMENT -WHAT DOES THE NEXT LINE DO? 
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+# WRITE YOUR OWN COMMENT - WHAT DOES THIS DO?
+st.dataframe(fruityvice_normalized)
