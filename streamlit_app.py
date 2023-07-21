@@ -26,7 +26,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # DISPLAY THE TABLE ON THE PAGE
 st.dataframe(fruits_to_show)
 
+# NEW SECTION TO SHOW ADVICE
+st.header("Fruityvice Fruit Advice!")
+
 # CALLING RHE FRUITYVICE API'
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
+st.text(fruityvice_response.json)
 
