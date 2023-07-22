@@ -69,8 +69,6 @@ def get_fruit_load_list():
 
 
 # ADD A BUTTON TO LOAD THE FRUIT
-st.header("View Our Fruit List - Add Your Favorites!")
-
 if st.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     my_data_rows = get_fruit_load_list()
@@ -82,6 +80,9 @@ if st.button('Get Fruit Load List'):
     # with my_cnx.cursor() as my_cur:
         # my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
         # return "Thanks for adding " + new_fruit
+
+# ADDIN HEADER
+st.header("View Our Fruit List - Add Your Favorites!")
 
 # ALLOW THE END USER TO ADD A FRUIT TO THE LIST
 def insert_row_snowflake(new_fruit):
