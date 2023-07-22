@@ -46,7 +46,7 @@ try:
     if not fruit_choice:
         st.error("Please select a fruit to get information.")
     else:
-        back_from_function = get_fruityvice_data(fruit_choice)
+        fruityvice_normalized = get_fruityvice_data(fruit_choice)
 # WRITE YOUR OWN COMMENT - WHAT DOES THIS DO?
         st.dataframe(fruityvice_normalized)
 
