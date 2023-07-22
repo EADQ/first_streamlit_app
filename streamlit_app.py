@@ -67,10 +67,14 @@ def get_fruit_load_list():
 
 # st.header("The fruit load list contains:")
 
+
 # ADD A BUTTON TO LOAD THE FRUIT
+st.header("View Our Fruit List - Add Your Favorites!")
+
 if st.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     my_data_rows = get_fruit_load_list()
+    my_cnx.close()
     st.dataframe(my_data_rows)
 
 # ALLOW THE END USER TO ADD A FRUIT TO THE LIST
@@ -85,12 +89,12 @@ def insert_row_snowflake(new_fruit):
         my_cur.execute("insert into fruit_load_list values (%s)", (new_fruit,))
     return "Thanks for adding " + new_fruit
 
-
 add_my_fruit = st.text_input('What fruit would you like to add?')
 if st.button('Add a Fruit to the List'):
     my_cnx = snowflake.connector.connect(**st.secrets['snowflake'])
     back_from_function = insert_row_snowflake(add_my_fruit)
     st.text(back_from_function)
+    my_cnx.close()
 
 # DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
 # st.stop()
