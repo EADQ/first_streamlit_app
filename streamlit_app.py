@@ -43,7 +43,8 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 st.dataframe(fruityvice_normalized)
 
 # ADDING FRUIT ADVICE
-fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
+# fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
+fruit_advice = st.text_input('What fruit would you like information about?', 'Kiwi', key='fruit_input')
 st.write('The user entered ', fruit_advice)
 
 # CONNECTING WITH SNOWFLAKE
