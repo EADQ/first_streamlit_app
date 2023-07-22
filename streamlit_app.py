@@ -59,7 +59,7 @@ except URLError as e:
 # st.write('The user entered ', fruit_advice)
 
 # DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
-st.stop()
+# st.stop()
 
 # CONNECTING WITH SNOWFLAKE
 # SNOWFLAKE-RELATED FUNCTIONS
