@@ -56,4 +56,4 @@ st.header("The fruit load list contains:")
 st.dataframe(my_data_rows)
 
 # THIS WILL NOT WORK CORRECTLY, BUT JUST GO WITH IT FOR NOW
-my_cur.execute('insert into fruit_load_list values ('from setramlite')')
+my_cur.execute('insert into fruit_load_list values ("from setreamlite")')
