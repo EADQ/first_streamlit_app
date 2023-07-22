@@ -45,8 +45,8 @@ try:
 # WRITE YOUR OWN COMMENT - WHAT DOES THIS DO?
         st.dataframe(fruityvice_normalized)
 
-    except URLError as e:
-        st.error("Error, unable to connect to the API")
+except URLError as e:
+    st.error("Error, unable to connect to the API")
 
 # ADDING FRUIT ADVICE
 # fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
