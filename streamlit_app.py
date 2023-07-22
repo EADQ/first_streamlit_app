@@ -78,7 +78,7 @@ if st.button('Get Fruit Load List'):
     # with my_cnx.cursor() as my_cur:
         # my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
 
- ALLOW THE END USER TO ADD A FRUIT TO THE LIST
+# ALLOW THE END USER TO ADD A FRUIT TO THE LIST
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
         my_cur.execute("insert into fruit_load_list values (%s)", (new_fruit,))
