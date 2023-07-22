@@ -49,7 +49,7 @@ fruit_advice = st.text_input('What fruit would you like information about?', 'Ki
 st.write('The user entered ', fruit_advice)
 
 # DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
-st.stop()
+# st.stop()
 
 # CONNECTING WITH SNOWFLAKE
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
@@ -61,4 +61,4 @@ st.dataframe(my_data_rows)
 
 # THIS WILL NOT WORK CORRECTLY, BUT JUST GO WITH IT FOR NOW
 # my_cur.execute('insert into fruit_load_list values ("from setreamlite")')
-my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
+# my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
