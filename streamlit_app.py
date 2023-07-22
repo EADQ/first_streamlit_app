@@ -42,6 +42,11 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # WRITE YOUR OWN COMMENT - WHAT DOES THIS DO?
 st.dataframe(fruityvice_normalized)
 
+# ADDING FRUIT ADVICE
+fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
+st.write('The user entered ', fruit_advice)
+
+# CONNECTING WITH SNOWFLAKE
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
