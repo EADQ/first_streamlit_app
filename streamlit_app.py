@@ -55,8 +55,8 @@ except URLError as e:
 
 # ADDING FRUIT ADVICE
 # fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
-fruit_advice = st.text_input('What fruit would you like information about?', 'Kiwi', key='fruit_input')
-st.write('The user entered ', fruit_advice)
+# fruit_advice = st.text_input('What fruit would you like information about?', 'Kiwi', key='fruit_input')
+# st.write('The user entered ', fruit_advice)
 
 # DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
 st.stop()
