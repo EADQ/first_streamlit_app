@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import snowflake.connector
+from urllib.error import URLError
 
 # MAKING BASE MENU
 st.title("My Mom's New Healthy Diner")
@@ -46,6 +47,9 @@ st.dataframe(fruityvice_normalized)
 # fruit_advice = st.text_input('What fruit would you like information about?','Kiwi')
 fruit_advice = st.text_input('What fruit would you like information about?', 'Kiwi', key='fruit_input')
 st.write('The user entered ', fruit_advice)
+
+# DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
+st.stop()
 
 # CONNECTING WITH SNOWFLAKE
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
