@@ -58,9 +58,6 @@ except URLError as e:
 # fruit_advice = st.text_input('What fruit would you like information about?', 'Kiwi', key='fruit_input')
 # st.write('The user entered ', fruit_advice)
 
-# DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
-# st.stop()
-
 # CONNECTING WITH SNOWFLAKE
 # SNOWFLAKE-RELATED FUNCTIONS
 def get_fruit_load_list():
@@ -79,3 +76,6 @@ if st.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
     my_data_rows = get_fruit_load_list()
     st.dataframe(my_data_rows)
+
+# DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
+# st.stop()
