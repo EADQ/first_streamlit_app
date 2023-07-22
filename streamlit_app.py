@@ -67,10 +67,6 @@ def get_fruit_load_list():
 
 # st.header("The fruit load list contains:")
 
-# THIS WILL NOT WORK CORRECTLY, BUT JUST GO WITH IT FOR NOW
-# my_cur.execute('insert into fruit_load_list values ("from setreamlite")')
-# my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
-
 # ADD A BUTTON TO LOAD THE FRUIT
 if st.button('Get Fruit Load List'):
     my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
@@ -80,8 +76,21 @@ if st.button('Get Fruit Load List'):
 # DON'T RUN ANYTHING PAST HERE WHILE WE TROUBLESHOOT
 # st.stop()
 
-# Allow the end user to add a fruit to the list
+#ALLOW THE END USER TO ADD A FRUIT TO THE LIST
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.execute("insert into fruit_load_list values (%s)", (new_fruit,))
-    return "Thanks for adding " + new_fruit
+        my_cur.execute("insert into fruit_load_list values ('from setreamlite')")
+        return "Thanks for adding " + new_fruit
+
+
+
+
+
+
+
+
+# Allow the end user to add a fruit to the list
+# def insert_row_snowflake(new_fruit):
+    # with my_cnx.cursor() as my_cur:
+        # my_cur.execute("insert into fruit_load_list values (%s)", (new_fruit,))
+    # return "Thanks for adding " + new_fruit
